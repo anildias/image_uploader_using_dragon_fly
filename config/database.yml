@@ -24,8 +24,6 @@ default: &default
 development:
   <<: *default
   database: dragon-fly-uploading_development
-  username: postgres
-  password: qburst
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,8 +58,6 @@ development:
 test:
   <<: *default
   database: dragon-fly-uploading_test
-  username: postgres
-  password: qburst
 
 # Do not keep production credentials in the repository,
 # instead read the configuration from the environment.
