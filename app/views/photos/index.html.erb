@@ -1,0 +1,14 @@
+<h1>List of photos</h1>
+ 
+<%= link_to 'Add your photo', new_photo_path, class: 'btn btn-lg btn-primary' %>
+ 
+<ul class="row" id="photos-list">
+  <% @photos.each do |photo| %>
+    <li class="col-xs-3">
+      <%= link_to image_tag(photo.image.thumb('180x180#').url, alt: photo.title, class: 'img-thumbnail'),
+                  photo.image.url, target: '_blank' %>
+      <p><%= photo.title %></p>
+    </li>
+  <% end %>
+</ul>
+<%= image_tag('https://photos-3.dropbox.com/t/0/AAC-gbYu2HuIv5cphVphleSnnfYGd-6uDSl9_q34SzLOcw/12/254777563/jpeg/32x32/3/_/1/2/IMG_0825.JPG/boTYq8sNTplTC9IlcPmuXUSpgxPObPkQTC0cz4oWZRc%2CNR0aaKuJd0hCGF2b_ueBXG0FgdfnylpS1Fg75xP_PGU?size=1024x768', :class => "icon-small") %>
